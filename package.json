@@ -1,0 +1,8 @@
+{
+  "name": "jp.lilxyzw.scene-view-extensions",
+  "version": "0.1.0",
+  "displayName": "lilSceneViewExtensions",
+  "description": "Scene view extension scripts.",
+  "unity": "2019.4",
+  "license": "MIT"
+}
