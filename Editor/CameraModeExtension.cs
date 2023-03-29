@@ -91,7 +91,6 @@ namespace lilSceneViewExtensions
                     switch(mode.name)
                     {
                         case MODE_ATTRIBUTE:
-                        Debug.Log("Shader Changed");
                             view.SetSceneViewShaderReplace(shaderAttributeViewer, null);
                             break;
                     }
