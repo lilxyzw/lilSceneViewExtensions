@@ -7,7 +7,7 @@ namespace lilSceneViewExtensions
 {
     public class CameraModeExtension
     {
-        private static readonly Shader shaderAttributeViewer = Shader.Find("Hidden/_lil/AttributeViewer");
+        private static Shader shaderAttributeViewer = Shader.Find("Hidden/_lil/AttributeViewer");
         private static readonly int propMode = Shader.PropertyToID("_AVOutputMode");
 
         private const string SECTION_NAME = "lil";
@@ -79,6 +79,10 @@ namespace lilSceneViewExtensions
 
         private static void SetupSceneViews()
         {
+            if(shaderAttributeViewer == null)
+            {
+                shaderAttributeViewer = Shader.Find("Hidden/_lil/AttributeViewer");
+            }
             foreach(SceneView view in SceneView.sceneViews)
             {
                 view.onCameraModeChanged += mode =>
